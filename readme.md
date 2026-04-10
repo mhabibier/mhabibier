@@ -85,22 +85,7 @@ I actively follow developments in **information security**, including vulnerabil
 
 <div align="center">
 
-## 📊 GitHub Stats
 
-<img src="https://github-readme-stats.vercel.app/api?username=mhabibier&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mhabibier&layout=compact&theme=tokyonight&hide_border=true" height="165"/>
-
-<br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=mhabibier&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
-
-<br/>
-
-</div>
-
----
-
-<div align="center">
 
 ## 🌐 Connect With Me
 
