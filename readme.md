@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hello, I'm **mhabibier** 👋
+# Hello, I'm **mhabibier** 
 
 <img src="Thinking Think GIF.gif" width="480" alt="coding gif"/>
 
