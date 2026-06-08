@@ -31,14 +31,14 @@ I actively follow developments in **information security**, including vulnerabil
 
 </div>
 
-### 🖥️ Programming Languages
+###  Programming Languages
 <p align="center">
   <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white"/>
 </p>
 
-### 🔐 Cybersecurity & Network Defense
+###  Cybersecurity & Network Defense
 <p align="center">
   <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white"/>
   <img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white"/>
@@ -56,7 +56,7 @@ I actively follow developments in **information security**, including vulnerabil
   <img src="https://img.shields.io/badge/VPN-4CAF50?style=for-the-badge&logo=openvpn&logoColor=white"/>
 </p>
 
-### 🖧 Operating Systems
+###  Operating Systems
 <p align="center">
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
   <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"/>
@@ -64,7 +64,7 @@ I actively follow developments in **information security**, including vulnerabil
   <img src="https://img.shields.io/badge/CentOS-262577?style=for-the-badge&logo=centos&logoColor=white"/>
 </p>
 
-### ☁️ Cloud & Infrastructure
+###  Cloud & Infrastructure
 <p align="center">
   <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"/>
   <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white"/>
@@ -72,7 +72,7 @@ I actively follow developments in **information security**, including vulnerabil
   <img src="https://img.shields.io/badge/Linux_Server-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
 </p>
 
-### 🛠️ Tools & Platforms
+###  Tools & Platforms
 <p align="center">
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
@@ -87,7 +87,7 @@ I actively follow developments in **information security**, including vulnerabil
 
 
 
-## 🌐 Connect With Me
+##  Connect With Me
 
 
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/mhabibierabbani)
