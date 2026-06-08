@@ -27,7 +27,7 @@ I actively follow developments in **information security**, including vulnerabil
 
 <div align="center">
 
-## ⚙️ Tech & Tools
+## Tech & Tools
 
 </div>
 
