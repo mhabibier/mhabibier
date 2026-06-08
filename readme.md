@@ -10,7 +10,7 @@
 
 <div align="center">
 
-## 🛡️ About Me
+##  About Me
 
 </div>
 
@@ -18,10 +18,10 @@ I am passionate about **Cyber Security** and **Information Technology**, with fo
 
 I actively follow developments in **information security**, including vulnerability analysis and network defense. I am also deeply interested in **cloud technologies** for building secure and scalable infrastructures.
 
-- 🔭 Currently exploring **network security** and **ethical hacking**
-- 🌱 Learning more about **cloud infrastructure** and **DevSecOps**
-- 🔐 Passionate about **vulnerability analysis** and **network defense**
-- 💡 Always looking to understand how things **break** — so I can make them **safer**
+-  Currently exploring **network security** and **ethical hacking**
+-  Learning more about **cloud infrastructure** and **DevSecOps**
+-  Passionate about **vulnerability analysis** and **network defense**
+-  Always looking to understand how things **break** — so I can make them **safer**
 
 ---
 
