@@ -31,7 +31,6 @@ I'm especially interested in vulnerability analysis, network defense, and cloud 
 - **Vulnerability analysis and network defense** — learning to identify risks and protect systems.
 - **Cloud infrastructure and DevSecOps** — exploring how to build secure, scalable systems.
 
-> “I want to understand how things break so I can help make them safer.”
 
 ---
 
