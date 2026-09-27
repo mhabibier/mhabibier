@@ -2,13 +2,10 @@
 
 # Hi, I'm mhabibier 
 
-### Computer Engineering Student · Aspiring Cybersecurity Analyst
-
 <img src="Thinking Think GIF.gif" width="440" alt="Coding GIF" />
 
 <br />
 
-I'm curious about how systems work, where they can fail, and how to make them safer.
 
 </div>
 
