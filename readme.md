@@ -10,9 +10,6 @@
 
 I'm curious about how systems work, where they can fail, and how to make them safer.
 
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/mhabibierabbani)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mhabibierabbani@gmail.com)
-
 </div>
 
 ---
