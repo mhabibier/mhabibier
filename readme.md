@@ -1,99 +1,47 @@
 <div align="center">
 
-# Hello, I'm **mhabibier**
+# Hi, I'm mhabibier 👋
 
-<img src="Thinking Think GIF.gif" width="480" alt="coding gif" />
+### Computer Engineering Student · Aspiring Cybersecurity Analyst
 
-</div>
+<img src="Thinking Think GIF.gif" width="440" alt="Coding GIF" />
 
----
+<br />
 
-<div align="center">
-
-## About Me
-
-</div>
-
-I am passionate about **Cyber Security** and **Information Technology**, with foundational knowledge in networking, operating systems, and data security. Skilled in **C** and **Python** programming, network configuration, and system analysis — I bring strong analytical thinking to identify and solve technical challenges.
-
-I actively follow developments in **information security**, including vulnerability analysis and network defense. I am also deeply interested in **cloud technologies** for building secure and scalable infrastructures.
-
-- Currently exploring **network security** and **ethical hacking**
-- Learning more about **cloud infrastructure** and **DevSecOps**
-- Passionate about **vulnerability analysis** and **network defense**
-- Always looking to understand how things **break** — so I can make them **safer**
-
----
-
-<div align="center">
-
-## Tech & Tools
-
-</div>
-
-### Programming Languages
-
-<p align="center">
-  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash" />
-</p>
-
-### Cybersecurity & Network Defense
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white" alt="Kali Linux" />
-  <img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white" alt="Wireshark" />
-  <img src="https://img.shields.io/badge/Nmap-214478?style=for-the-badge&logo=nmap&logoColor=white" alt="Nmap" />
-  <img src="https://img.shields.io/badge/Metasploit-E34F26?style=for-the-badge&logo=metasploit&logoColor=white" alt="Metasploit" />
-  <img src="https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=burp-suite&logoColor=white" alt="Burp Suite" />
-</p>
-
-### 🌐 Networking
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco" />
-  <img src="https://img.shields.io/badge/Cisco_Packet_Tracer-049FD9?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco Packet Tracer" />
-  <img src="https://img.shields.io/badge/GNS3-1565C0?style=for-the-badge&logo=gnome&logoColor=white" alt="GNS3" />
-  <img src="https://img.shields.io/badge/TCP%2FIP-005C97?style=for-the-badge&logo=internet-explorer&logoColor=white" alt="TCP/IP" />
-  <img src="https://img.shields.io/badge/VPN-4CAF50?style=for-the-badge&logo=openvpn&logoColor=white" alt="VPN" />
-</p>
-
-### Operating Systems
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
-  <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" />
-  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
-  <img src="https://img.shields.io/badge/CentOS-262577?style=for-the-badge&logo=centos&logoColor=white" alt="CentOS" />
-</p>
-
-### Cloud & Infrastructure
-
-<p align="center">
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Linux_Server-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Server" />
-</p>
-
-### Tools & Platforms
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" />
-  <img src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white" alt="VirtualBox" />
-  <img src="https://img.shields.io/badge/VMware-607078?style=for-the-badge&logo=vmware&logoColor=white" alt="VMware" />
-</p>
-
----
-
-<div align="center">
-
-## Connect With Me
+I'm curious about how systems work, where they can fail, and how to make them safer.
 
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/mhabibierabbani)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mhabibierabbani@gmail.com)
+
+</div>
+
+---
+
+## 👨‍💻 About Me
+
+I'm a **Computer Engineering student at Telkom University** with a strong interest in **cybersecurity** and **information technology**.
+
+I have a foundation in networking, operating systems, data security, and programming with C and Python. I enjoy analyzing technical problems and finding practical ways to solve them.
+
+I'm especially interested in vulnerability analysis, network defense, and cloud infrastructure. My goal is to keep learning and grow into a **cybersecurity analyst**.
+
+## 🔎 What I'm Exploring
+
+- **Network security and ethical hacking** — understanding vulnerabilities and how to address them.
+- **Vulnerability analysis and network defense** — learning to identify risks and protect systems.
+- **Cloud infrastructure and DevSecOps** — exploring how to build secure, scalable systems.
+
+> “I want to understand how things break so I can help make them safer.”
+
+---
+
+<div align="center">
+
+### Let's Connect
+
+I'm always open to learning, sharing ideas, and connecting with others interested in cybersecurity.
+
+[![Instagram](https://img.shields.io/badge/Follow_on_Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/mhabibierabbani)
+[![Email](https://img.shields.io/badge/Send_me_an_Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mhabibierabbani@gmail.com)
 
 </div>
