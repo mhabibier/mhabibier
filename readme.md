@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hi, I'm mhabibier 👋
+# Hi, I'm mhabibier 
 
 ### Computer Engineering Student · Aspiring Cybersecurity Analyst
 
@@ -17,7 +17,7 @@ I'm curious about how systems work, where they can fail, and how to make them sa
 
 ---
 
-## 👨‍💻 About Me
+##  About Me
 
 I'm a **Computer Engineering student at Telkom University** with a strong interest in **cybersecurity** and **information technology**.
 
@@ -25,7 +25,7 @@ I have a foundation in networking, operating systems, data security, and program
 
 I'm especially interested in vulnerability analysis, network defense, and cloud infrastructure. My goal is to keep learning and grow into a **cybersecurity analyst**.
 
-## 🔎 What I'm Exploring
+##  What I'm Exploring
 
 - **Network security and ethical hacking** — understanding vulnerabilities and how to address them.
 - **Vulnerability analysis and network defense** — learning to identify risks and protect systems.
