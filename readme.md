@@ -21,9 +21,9 @@ I'm especially interested in vulnerability analysis, network defense, and cloud 
 
 ##  What I'm Exploring
 
-- **Network security and ethical hacking** — understanding vulnerabilities and how to address them.
-- **Vulnerability analysis and network defense** — learning to identify risks and protect systems.
-- **Cloud infrastructure and DevSecOps** — exploring how to build secure, scalable systems.
+- **Network security and ethical hacking** understanding vulnerabilities and how to address them.
+- **Vulnerability analysis and network defense** learning to identify risks and protect systems.
+- **Cloud infrastructure and DevSecOps** exploring how to build secure, scalable systems.
 
 
 ---
