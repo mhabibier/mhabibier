@@ -31,11 +31,13 @@ ${glyphKeyframes}
 const typingCss = `
 .type-reveal,.typing-cursor{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px}
 .type-reveal{animation-name:terminal-type;animation-iteration-count:1;animation-fill-mode:both}
+.terminal-line{animation-name:terminal-unclip;animation-iteration-count:1;animation-fill-mode:forwards;animation-timing-function:steps(1,end)}
 .typing-cursor{opacity:0;animation-name:terminal-cursor,terminal-cursor-visible;animation-iteration-count:1;animation-fill-mode:both,forwards}
 @keyframes terminal-type{from{width:0}to{width:var(--line-width)}}
+@keyframes terminal-unclip{from{clip-path:var(--typing-clip)}to{clip-path:none}}
 @keyframes terminal-cursor{from{transform:translateX(0)}to{transform:translateX(var(--line-width))}}
 @keyframes terminal-cursor-visible{0%,99.99%{opacity:1}100%{opacity:0}}
-@media(prefers-reduced-motion:reduce){.type-reveal{animation:none;width:var(--line-width)}.typing-cursor{animation:none;opacity:0}}
+@media(prefers-reduced-motion:reduce){.type-reveal{animation:none;width:var(--line-width)}.terminal-line{animation:none;clip-path:none}.typing-cursor{animation:none;opacity:0}}
 `;
 
 function frameLines(lines, frame) {
@@ -141,7 +143,10 @@ function svgFor(lines, theme, animate = false) {
     const timing = `--line-width:${chars}ch;animation-duration:${duration.toFixed(3)}s;animation-delay:${delay.toFixed(3)}s;animation-timing-function:steps(${chars},end)`;
     typingDefs.push(`<clipPath id="${id}" clipPathUnits="userSpaceOnUse"><rect class="type-reveal" x="405" y="${y - 18}" width="570" height="24" style="${timing}"/></clipPath>`);
     typingOffset += duration + .07;
-    return `<g class="terminal-line" clip-path="url(#${id})">${html}</g><rect class="typing-cursor" x="405" y="${y - 14}" width="8" height="16" fill="${c.green}" style="${timing}"/>`;
+    // Remove the clip when typing finishes. Font metrics can differ between
+    // browsers; completed lines must never lose the final email character.
+    const completion = `--typing-clip:url(#${id});animation-duration:${duration.toFixed(3)}s;animation-delay:${delay.toFixed(3)}s`;
+    return `<g class="terminal-line" clip-path="url(#${id})" style="${completion}">${html}</g><rect class="typing-cursor" x="405" y="${y - 14}" width="8" height="16" fill="${c.green}" style="${timing}"/>`;
   };
   const text = (x, y, value, color = c.fg, extra = '') => typeLine(`<text x="${x}" y="${y}" fill="${color}" ${extra}>${escape(value)}</text>`, y, value);
   const field = (y, label, value) => {
