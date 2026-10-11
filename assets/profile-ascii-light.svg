@@ -3,7 +3,7 @@
 <title id="title">Habibie — ASCII terminal GitHub profile</title>
 <desc id="desc">A coarse portrait formed entirely from 39 columns and 26 rows of text characters, with gently changing glyphs, beside Habibie's cybersecurity interests and contact information.</desc>
 <style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}text,tspan{white-space:pre}
-.ascii-frame{opacity:0;animation:glyph-cycle 3.6s steps(1,end) infinite}
+.ascii-frame{opacity:0;animation:glyph-cycle 1.2s steps(1,end) infinite}
 .ascii-frame:first-child{opacity:1}
 @keyframes glyph-cycle{0%{opacity:1}12.5%,100%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.ascii-frame{animation:none;opacity:0}.ascii-frame:first-child{opacity:1}}
@@ -35,7 +35,7 @@
 <tspan x="15" y="467">       ,      .,:;,:;,:!i;; ,. ,: ,</tspan>
 <tspan x="15" y="486">                 ,:.,;,:: ,. ,.</tspan>
 <tspan x="15" y="505">                  ,:.,. ,</tspan></text></g>
-<g class="ascii-frame" style="animation-delay:-0.45s"><text xml:space="preserve"><tspan x="15" y="30">              ,:.::</tspan>
+<g class="ascii-frame" style="animation-delay:-0.15s"><text xml:space="preserve"><tspan x="15" y="30">              ,:.::</tspan>
 <tspan x="15" y="49">         ,:i#MMWMW@@@M%j,</tspan>
 <tspan x="15" y="68">       ;#MWMggMMM@%M@%M%MgMM#j,</tspan>
 <tspan x="15" y="87">     !WW%M%M%M#M%M@%@@%@@%W@WM%g;</tspan>
@@ -61,7 +61,7 @@
 <tspan x="15" y="467">       ,      ,,:;,:;.:!i;; .. ,: ,</tspan>
 <tspan x="15" y="486">                 ,:.,;,:; ,. ,.</tspan>
 <tspan x="15" y="505">                  .:.,. ,</tspan></text></g>
-<g class="ascii-frame" style="animation-delay:-0.90s"><text xml:space="preserve"><tspan x="15" y="30">              ,;,:;</tspan>
+<g class="ascii-frame" style="animation-delay:-0.30s"><text xml:space="preserve"><tspan x="15" y="30">              ,;,:;</tspan>
 <tspan x="15" y="49">         .;igWM@%%M@%MWj,</tspan>
 <tspan x="15" y="68">       ;#MWM##MMM@M@@%M%Mg%@#j,</tspan>
 <tspan x="15" y="87">     !WWM%%M%M#M%WW%@@%@@%@%%M%g;</tspan>
@@ -87,7 +87,7 @@
 <tspan x="15" y="467">       ,      ..:;.:;.:!i;: ,, .: .</tspan>
 <tspan x="15" y="486">                 ,:.,;,;: ,, ,.</tspan>
 <tspan x="15" y="505">                  ,:.,. ,</tspan></text></g>
-<g class="ascii-frame" style="animation-delay:-1.35s"><text xml:space="preserve"><tspan x="15" y="30">              ,;.:;</tspan>
+<g class="ascii-frame" style="animation-delay:-0.45s"><text xml:space="preserve"><tspan x="15" y="30">              ,;.:;</tspan>
 <tspan x="15" y="49">         ,;i#MMWM%M@%%Wj,</tspan>
 <tspan x="15" y="68">       ;#W%WggW@MM%@@%M%M#MM#j,</tspan>
 <tspan x="15" y="87">     !W@M%%M%M#M%%@%@%M@@%MW%M%g;</tspan>
@@ -113,7 +113,7 @@
 <tspan x="15" y="467">       .      ..:;,:;,:!i:; .. ,: ,</tspan>
 <tspan x="15" y="486">                 ,;,,:.;: ,. .,</tspan>
 <tspan x="15" y="505">                  ,;.,, ,</tspan></text></g>
-<g class="ascii-frame" style="animation-delay:-1.80s"><text xml:space="preserve"><tspan x="15" y="30">              .:.::</tspan>
+<g class="ascii-frame" style="animation-delay:-0.60s"><text xml:space="preserve"><tspan x="15" y="30">              .:.::</tspan>
 <tspan x="15" y="49">         ,;igMM@M%M@%M%k,</tspan>
 <tspan x="15" y="68">       ;#MWWg#M@@M%@@%M%W#MM#j,</tspan>
 <tspan x="15" y="87">     !WMM%%%%M#@MM@WM@@@@%@M%%%g;</tspan>
@@ -139,7 +139,7 @@
 <tspan x="15" y="467">       ,      ,,;;,;;.;!i;; .. ,: .</tspan>
 <tspan x="15" y="486">                 ,:.,;,:: ,, ..</tspan>
 <tspan x="15" y="505">                  ,;... ,</tspan></text></g>
-<g class="ascii-frame" style="animation-delay:-2.25s"><text xml:space="preserve"><tspan x="15" y="30">              ,:,;:</tspan>
+<g class="ascii-frame" style="animation-delay:-0.75s"><text xml:space="preserve"><tspan x="15" y="30">              ,:,;:</tspan>
 <tspan x="15" y="49">         ,;i#@%WM%MM%MWj,</tspan>
 <tspan x="15" y="68">       :#@WW##M%M@%@@%M@W#%Mgj,</tspan>
 <tspan x="15" y="87">     !%MM%%M%MgM%M@W@@%M@M@@%M%g;</tspan>
@@ -165,7 +165,7 @@
 <tspan x="15" y="467">       ,      ,,:;,;;,;|i;; ,. .: ,</tspan>
 <tspan x="15" y="486">                 ,:,.;,:: ,. ,.</tspan>
 <tspan x="15" y="505">                  ,:.., ,</tspan></text></g>
-<g class="ascii-frame" style="animation-delay:-2.70s"><text xml:space="preserve"><tspan x="15" y="30">              ,:,:;</tspan>
+<g class="ascii-frame" style="animation-delay:-0.90s"><text xml:space="preserve"><tspan x="15" y="30">              ,:,:;</tspan>
 <tspan x="15" y="49">         ,;igW%W@MM@%%%j,</tspan>
 <tspan x="15" y="68">       :#M%MggMMM@%M@MM%M#MM#k,</tspan>
 <tspan x="15" y="87">     !WMM%W%WMgMWM@%@@%%@@@@MM%g:</tspan>
@@ -191,7 +191,7 @@
 <tspan x="15" y="467">       ,      ,.:;.;;,;!i;; ,. ,: .</tspan>
 <tspan x="15" y="486">                 ,;.,;,;: ,. .,</tspan>
 <tspan x="15" y="505">                  ,;.,. .</tspan></text></g>
-<g class="ascii-frame" style="animation-delay:-3.15s"><text xml:space="preserve"><tspan x="15" y="30">              ,;,::</tspan>
+<g class="ascii-frame" style="animation-delay:-1.05s"><text xml:space="preserve"><tspan x="15" y="30">              ,;,::</tspan>
 <tspan x="15" y="49">         .;|gM%%M%M@WMWj,</tspan>
 <tspan x="15" y="68">       :#MWW##MMM@%@@%%MM#MM#k.</tspan>
 <tspan x="15" y="87">     !MMMWW%%MgM%M@%@%%@@%@@%MM#;</tspan>

@@ -7,7 +7,7 @@ const cols = 39;
 const rows = 26;
 const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const frameCount = 8;
-const frameSeconds = 0.45;
+const frameSeconds = 0.15;
 const cycleSeconds = frameCount * frameSeconds;
 const animationCss = `
 .ascii-frame{opacity:0;animation:glyph-cycle ${cycleSeconds}s steps(1,end) infinite}
