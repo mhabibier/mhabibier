@@ -28,6 +28,15 @@ ${glyphKeyframes}
  .portrait-binary{animation:none;opacity:0}
 }
 `;
+const typingCss = `
+.type-reveal,.typing-cursor{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px}
+.type-reveal{animation-name:terminal-type;animation-iteration-count:1;animation-fill-mode:both}
+.typing-cursor{opacity:0;animation-name:terminal-cursor,terminal-cursor-visible;animation-iteration-count:1;animation-fill-mode:both,forwards}
+@keyframes terminal-type{from{width:0}to{width:var(--line-width)}}
+@keyframes terminal-cursor{from{transform:translateX(0)}to{transform:translateX(var(--line-width))}}
+@keyframes terminal-cursor-visible{0%,99.99%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.type-reveal{animation:none;width:var(--line-width)}.typing-cursor{animation:none;opacity:0}}
+`;
 
 function frameLines(lines, frame) {
   if (frame === 0) return lines;
@@ -121,31 +130,52 @@ function svgFor(lines, theme, animate = false) {
   } : {
     bg: '#f6f8fa', fg: '#24292f', key: '#953800', value: '#0a3069', muted: '#8c959f', green: '#1a7f37'
   };
-  const text = (x, y, value, color = c.fg, extra = '') => `<text x="${x}" y="${y}" fill="${color}" ${extra}>${escape(value)}</text>`;
-  const field = (y, label, value) => `<text x="405" y="${y}" fill="${c.fg}"><tspan fill="${c.muted}">. </tspan><tspan fill="${c.key}">${escape(label)}</tspan>:<tspan fill="${c.muted}"> ${'.'.repeat(Math.max(2, 14 - label.length))} </tspan><tspan fill="${c.value}">${escape(value)}</tspan></text>`;
+  const typingDefs = [];
+  let typingOffset = .18;
+  const typeLine = (html, y, value) => {
+    if (!animate) return html;
+    const chars = Math.max(1, value.length);
+    const duration = Math.max(.06, chars * .012);
+    const delay = typingOffset;
+    const id = `terminal-type-${typingDefs.length}`;
+    const timing = `--line-width:${chars}ch;animation-duration:${duration.toFixed(3)}s;animation-delay:${delay.toFixed(3)}s;animation-timing-function:steps(${chars},end)`;
+    typingDefs.push(`<clipPath id="${id}" clipPathUnits="userSpaceOnUse"><rect class="type-reveal" x="405" y="${y - 18}" width="570" height="24" style="${timing}"/></clipPath>`);
+    typingOffset += duration + .07;
+    return `<g class="terminal-line" clip-path="url(#${id})">${html}</g><rect class="typing-cursor" x="405" y="${y - 14}" width="8" height="16" fill="${c.green}" style="${timing}"/>`;
+  };
+  const text = (x, y, value, color = c.fg, extra = '') => typeLine(`<text x="${x}" y="${y}" fill="${color}" ${extra}>${escape(value)}</text>`, y, value);
+  const field = (y, label, value) => {
+    const dots = '.'.repeat(Math.max(2, 14 - label.length));
+    const html = `<text x="405" y="${y}" fill="${c.fg}"><tspan fill="${c.muted}">. </tspan><tspan fill="${c.key}">${escape(label)}</tspan>:<tspan fill="${c.muted}"> ${dots} </tspan><tspan fill="${c.value}">${escape(value)}</tspan></text>`;
+    return typeLine(html, y, `. ${label}: ${dots} ${value}`);
+  };
   const heading = (y, label) => text(405, y, label + ' ' + '-'.repeat(Math.max(3, 53 - label.length)));
+  const terminal = [
+    heading(30, 'habibie@ciphernet'),
+    field(68, 'Focus', 'Cybersecurity & networking'),
+    field(94, 'Status', 'Learning & exploring'),
+    text(405, 132, '. ', c.muted),
+    heading(170, '- Interests'),
+    field(208, 'Network', 'Security & ethical hacking'),
+    field(234, 'Analysis', 'Vulnerability analysis'),
+    field(260, 'Defense', 'Network defense'),
+    field(286, 'Cloud', 'Infrastructure & DevSecOps'),
+    text(405, 324, '. ', c.muted),
+    heading(362, '- Contact'),
+    field(400, 'Instagram', '@mhabibierabbani'),
+    field(426, 'Email', 'mhabibierabbani@gmail.com'),
+    text(405, 478, '$ learn; share; connect', c.green),
+    text(405, 506, '// Curiosity. Security. Connection.', c.muted)
+  ].join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" role="img" aria-labelledby="title desc" xml:space="preserve">
 <title id="title">Habibie — ASCII terminal GitHub profile</title>
-<desc id="desc">A coarse portrait formed entirely from 39 columns and 26 rows of text characters${animate ? ', with changing glyphs and a smooth transition between ASCII and binary digits' : ''}, beside Habibie's cybersecurity interests and contact information.</desc>
-<style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}text,tspan{white-space:pre}${animate ? animationCss : ''}</style>
+<desc id="desc">A coarse portrait formed entirely from 39 columns and 26 rows of text characters${animate ? ', with changing glyphs and a smooth transition between ASCII and binary digits' : ''}, beside Habibie's cybersecurity interests and contact information${animate ? ', typed line by line once on load' : ''}.</desc>
+<style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}text,tspan{white-space:pre}${animate ? animationCss + typingCss : ''}</style>
+${animate ? `<defs>${typingDefs.join('\n')}</defs>` : ''}
 <rect width="985" height="530" fill="${c.bg}" rx="15"/>
 <g fill="${c.fg}">${asciiArt(lines, animate)}</g>
-${heading(30, 'habibie@ciphernet')}
-${field(68, 'Focus', 'Cybersecurity & networking')}
-${field(94, 'Status', 'Learning & exploring')}
-${text(405, 132, '. ', c.muted)}
-${heading(170, '- Interests')}
-${field(208, 'Network', 'Security & ethical hacking')}
-${field(234, 'Analysis', 'Vulnerability analysis')}
-${field(260, 'Defense', 'Network defense')}
-${field(286, 'Cloud', 'Infrastructure & DevSecOps')}
-${text(405, 324, '. ', c.muted)}
-${heading(362, '- Contact')}
-${field(400, 'Instagram', '@mhabibierabbani')}
-${field(426, 'Email', 'mhabibierabbani@gmail.com')}
-${text(405, 478, '$ learn; share; connect', c.green)}
-${text(405, 506, '// Curiosity. Security. Connection.', c.muted)}
+${terminal}
 </svg>\n`;
 }
 
