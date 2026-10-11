@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile-ascii-dark.svg">
-  <img src="assets/profile-ascii-light.svg" width="985" alt="Habibie's ASCII text portrait and terminal profile, with cybersecurity interests and contact information">
+  <img src="assets/profile-ascii-light.svg" width="985" alt="Habibie's animated ASCII text portrait and terminal profile, with cybersecurity interests and contact information">
 </picture>
 
 ### Hi, I'm Habibie

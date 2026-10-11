@@ -6,6 +6,38 @@ const root = path.resolve(__dirname, '..');
 const cols = 39;
 const rows = 26;
 const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+const frameCount = 8;
+const frameSeconds = 0.45;
+const cycleSeconds = frameCount * frameSeconds;
+const animationCss = `
+.ascii-frame{opacity:0;animation:glyph-cycle ${cycleSeconds}s steps(1,end) infinite}
+.ascii-frame:first-child{opacity:1}
+@keyframes glyph-cycle{0%{opacity:1}12.5%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.ascii-frame{animation:none;opacity:0}.ascii-frame:first-child{opacity:1}}
+`;
+
+function frameLines(lines, frame) {
+  if (frame === 0) return lines;
+  // Substitute only characters with similar visual weight. Spaces, positions,
+  // and the silhouette stay fixed; all profile information stays still.
+  const weights = ['@%MW', '#g', 'kj', 'i|!', ';:', '.,'];
+  return lines.map((line, y) => [...line].map((char, x) => {
+    const group = weights.find((choices) => choices.includes(char));
+    if (!group) return char;
+    const hash = ((x + 1) * 73856093 ^ (y + 1) * 19349663 ^ frame * 83492791) >>> 0;
+    if (hash % 100 >= 28) return char;
+    const alternatives = [...group].filter((candidate) => candidate !== char);
+    return alternatives[Math.floor(hash / 100) % alternatives.length];
+  }).join(''));
+}
+
+function asciiArt(lines, animate) {
+  const renderText = (frame) => `<text xml:space="preserve">${frame.map((line, i) => `<tspan x="15" y="${30 + i * 19}">${escape(line)}</tspan>`).join('\n')}</text>`;
+  if (!animate) return renderText(lines);
+  return `<g aria-hidden="true">${Array.from({ length: frameCount }, (_, i) =>
+    `<g class="ascii-frame" style="animation-delay:-${(i * frameSeconds).toFixed(2)}s">${renderText(frameLines(lines, i))}</g>`
+  ).join('\n')}</g>`;
+}
 
 async function photoToText(input) {
   const { data, info } = await sharp(input).removeAlpha().raw().toBuffer({ resolveWithObject: true });
@@ -47,7 +79,7 @@ async function photoToText(input) {
   return lines.join('\n') + '\n';
 }
 
-function svgFor(lines, theme) {
+function svgFor(lines, theme, animate = false) {
   const c = theme === 'dark' ? {
     bg: '#161b22', fg: '#c9d1d9', key: '#ffa657', value: '#a5d6ff', muted: '#616e7f', green: '#3fb950'
   } : {
@@ -56,14 +88,13 @@ function svgFor(lines, theme) {
   const text = (x, y, value, color = c.fg, extra = '') => `<text x="${x}" y="${y}" fill="${color}" ${extra}>${escape(value)}</text>`;
   const field = (y, label, value) => `<text x="405" y="${y}" fill="${c.fg}"><tspan fill="${c.muted}">. </tspan><tspan fill="${c.key}">${escape(label)}</tspan>:<tspan fill="${c.muted}"> ${'.'.repeat(Math.max(2, 14 - label.length))} </tspan><tspan fill="${c.value}">${escape(value)}</tspan></text>`;
   const heading = (y, label) => text(405, y, label + ' ' + '-'.repeat(Math.max(3, 53 - label.length)));
-  const art = lines.map((line, i) => `<tspan x="15" y="${30 + i * 19}">${escape(line)}</tspan>`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" role="img" aria-labelledby="title desc" xml:space="preserve">
 <title id="title">Habibie — ASCII terminal GitHub profile</title>
-<desc id="desc">A coarse portrait formed entirely from 39 columns and 26 rows of text characters, beside Habibie's cybersecurity interests and contact information.</desc>
-<style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}text,tspan{white-space:pre}</style>
+<desc id="desc">A coarse portrait formed entirely from 39 columns and 26 rows of text characters${animate ? ', with gently changing glyphs' : ''}, beside Habibie's cybersecurity interests and contact information.</desc>
+<style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}text,tspan{white-space:pre}${animate ? animationCss : ''}</style>
 <rect width="985" height="530" fill="${c.bg}" rx="15"/>
-<text fill="${c.fg}" xml:space="preserve">${art}</text>
+<g fill="${c.fg}">${asciiArt(lines, animate)}</g>
 ${heading(30, 'habibie@ciphernet')}
 ${field(68, 'Focus', 'Cybersecurity & networking')}
 ${field(94, 'Status', 'Learning & exploring')}
@@ -86,20 +117,21 @@ async function main() {
   const textPath = path.join(root, 'assets', 'habibie-ascii.txt');
   if (process.argv[2]) await fs.writeFile(textPath, await photoToText(process.argv[2]));
   const lines = (await fs.readFile(textPath, 'utf8')).trimEnd().split('\n');
-  const portraitSvg = `<?xml version="1.0" encoding="UTF-8"?>
+  const portraitSvgFor = (animate) => `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="530" viewBox="0 0 400 530" xml:space="preserve">
 <title>Habibie — native ASCII portrait</title>
+<desc>A coarse ASCII portrait${animate ? ' with changing glyphs; reduced motion displays a still portrait' : ''}.</desc>
+<style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}${animate ? animationCss : ''}</style>
 <rect width="400" height="530" fill="#161b22" rx="15"/>
-<text fill="#c9d1d9" font-family="Consolas,Liberation Mono,DejaVu Sans Mono,monospace" font-size="16" style="white-space:pre">${lines.map((line, i) => `<tspan x="15" y="${30 + i * 19}">${escape(line)}</tspan>`).join('\n')}</text>
+<g fill="#c9d1d9">${asciiArt(lines, animate)}</g>
 </svg>\n`;
-  await fs.writeFile(path.join(root, 'assets', 'habibie-ascii.svg'), portraitSvg);
-  await sharp(Buffer.from(portraitSvg), { density: 144 }).png().toFile(path.join(root, 'assets', 'habibie-ascii.png'));
+  await fs.writeFile(path.join(root, 'assets', 'habibie-ascii.svg'), portraitSvgFor(true));
+  await sharp(Buffer.from(portraitSvgFor(false)), { density: 144 }).png().toFile(path.join(root, 'assets', 'habibie-ascii.png'));
   for (const theme of ['dark', 'light']) {
-    const svg = svgFor(lines, theme);
     const stem = path.join(root, 'assets', `profile-ascii-${theme}`);
-    await fs.writeFile(`${stem}.svg`, svg);
-    await sharp(Buffer.from(svg), { density: 144 }).png().toFile(`${stem}.png`);
-    console.log(`Built profile-ascii-${theme}: native SVG text and PNG`);
+    await fs.writeFile(`${stem}.svg`, svgFor(lines, theme, true));
+    await sharp(Buffer.from(svgFor(lines, theme)), { density: 144 }).png().toFile(`${stem}.png`);
+    console.log(`Built profile-ascii-${theme}: animated native SVG text and static PNG`);
   }
 }
 main().catch((error) => { console.error(error.message); process.exitCode = 1; });

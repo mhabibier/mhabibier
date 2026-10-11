@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" role="img" aria-labelledby="title desc" xml:space="preserve">
 <title id="title">Habibie — ASCII terminal GitHub profile</title>
-<desc id="desc">A coarse portrait formed entirely from 39 columns and 26 rows of text characters, beside Habibie's cybersecurity interests and contact information.</desc>
-<style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}text,tspan{white-space:pre}</style>
+<desc id="desc">A coarse portrait formed entirely from 39 columns and 26 rows of text characters, with gently changing glyphs, beside Habibie's cybersecurity interests and contact information.</desc>
+<style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}text,tspan{white-space:pre}
+.ascii-frame{opacity:0;animation:glyph-cycle 3.6s steps(1,end) infinite}
+.ascii-frame:first-child{opacity:1}
+@keyframes glyph-cycle{0%{opacity:1}12.5%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.ascii-frame{animation:none;opacity:0}.ascii-frame:first-child{opacity:1}}
+</style>
 <rect width="985" height="530" fill="#161b22" rx="15"/>
-<text fill="#c9d1d9" xml:space="preserve"><tspan x="15" y="30">              ,:,::</tspan>
+<g fill="#c9d1d9"><g aria-hidden="true"><g class="ascii-frame" style="animation-delay:-0.00s"><text xml:space="preserve"><tspan x="15" y="30">              ,:,::</tspan>
 <tspan x="15" y="49">         ,;i#MMWM%M@%MWj,</tspan>
 <tspan x="15" y="68">       ;#MWMg#MMM@%@@%M%M#MM#j,</tspan>
 <tspan x="15" y="87">     !WMM%%M%M#M%M@%@@%@@%@@%M%g;</tspan>
@@ -29,7 +34,189 @@
 <tspan x="15" y="448">            ,;,:!i;!i!|i;|j!: ,:</tspan>
 <tspan x="15" y="467">       ,      .,:;,:;,:!i;; ,. ,: ,</tspan>
 <tspan x="15" y="486">                 ,:.,;,:: ,. ,.</tspan>
-<tspan x="15" y="505">                  ,:.,. ,</tspan></text>
+<tspan x="15" y="505">                  ,:.,. ,</tspan></text></g>
+<g class="ascii-frame" style="animation-delay:-0.45s"><text xml:space="preserve"><tspan x="15" y="30">              ,:.::</tspan>
+<tspan x="15" y="49">         ,:i#MMWMW@@@M%j,</tspan>
+<tspan x="15" y="68">       ;#MWMggMMM@%M@%M%MgMM#j,</tspan>
+<tspan x="15" y="87">     !WW%M%M%M#M%M@%@@%@@%W@WM%g;</tspan>
+<tspan x="15" y="106">   !%@M@M@@M#MMW%%M%%@@%%@%@@MMMW|</tspan>
+<tspan x="15" y="125">  j%@%@W@%@%%W@W#Wgj##k#g#W%%@%M%%;</tspan>
+<tspan x="15" y="144">  !%%M%%gki;:.;:.,:.,;,:!!!!gW@%%Mg</tspan>
+<tspan x="15" y="163">   g%@||i;!.::.,:,,:.;;i:!i!|i#M%Mj</tspan>
+<tspan x="15" y="182">   jWji;!i:;.,:.,:.,:.;:|;|j!jik%@,</tspan>
+<tspan x="15" y="201">   !M!ii!k|!kj|!,,:,;|kkkjikk|jjMj</tspan>
+<tspan x="15" y="220">   ,Wi;!i:!|:!k!!|;|ii|k!|j|ji!kk,</tspan>
+<tspan x="15" y="239">  .i:j|;ii!#g!i!:;,!|i!|gikj!|!!ji!</tspan>
+<tspan x="15" y="258">  ,;,!i,:;,:;,,;,;:ii!,:;i;!i;|k||.</tspan>
+<tspan x="15" y="277">   ,;i;:.,;,.;.:i,:!k!:.;;,:|k!kj:</tspan>
+<tspan x="15" y="296">    ,ii::..:,,;i!;,;ki;:.:;i:|iij</tspan>
+<tspan x="15" y="315">     ,||;;,,:.:!j!ki||,.;.:!k|k,.</tspan>
+<tspan x="15" y="334">      ,!i:;,;;|!|j!|i|i.;!i!ji;</tspan>
+<tspan x="15" y="353">       ,!i;:i:|ki!i;!i||i!|i|;</tspan>
+<tspan x="15" y="372">         ;k;!i;!i|!j|!j!|||kj</tspan>
+<tspan x="15" y="391">          |iii|:!i|!k!|i!#ggk</tspan>
+<tspan x="15" y="410">          ;ii|kji#g#Wg#Wgjjji|</tspan>
+<tspan x="15" y="429">           ;i!!j!ikjk##ikj|jj;,</tspan>
+<tspan x="15" y="448">            ,;,;!!:ii!|i;!j|: ,:</tspan>
+<tspan x="15" y="467">       ,      ,,:;,:;.:!i;; .. ,: ,</tspan>
+<tspan x="15" y="486">                 ,:.,;,:; ,. ,.</tspan>
+<tspan x="15" y="505">                  .:.,. ,</tspan></text></g>
+<g class="ascii-frame" style="animation-delay:-0.90s"><text xml:space="preserve"><tspan x="15" y="30">              ,;,:;</tspan>
+<tspan x="15" y="49">         .;igWM@%%M@%MWj,</tspan>
+<tspan x="15" y="68">       ;#MWM##MMM@M@@%M%Mg%@#j,</tspan>
+<tspan x="15" y="87">     !WWM%%M%M#M%WW%@@%@@%@%%M%g;</tspan>
+<tspan x="15" y="106">   !%%M@%%%M#MMWM%@%MW@%@@M@@@@@%|</tspan>
+<tspan x="15" y="125">  k%%%@@@%@%W%%M#Wgjggk###W%W@%@%%;</tspan>
+<tspan x="15" y="144">  !@%M%%gji:;.::.,;,.;,:!i!|gW@%W%g</tspan>
+<tspan x="15" y="163">   g%@|i!;|,::..:,.;.::i;|i!|!#%%Mj</tspan>
+<tspan x="15" y="182">   jWki:|!::..:.,;.,:,::i:|k!kikM%,</tspan>
+<tspan x="15" y="201">   iM!!!!ji|kj||,,;,;ijjkjijk|jkMj</tspan>
+<tspan x="15" y="220">   ,@i;|!;!i;!j||!;|!!!j!|j|ji|kj,</tspan>
+<tspan x="15" y="239">  ,!;ki;!ii#g!|i;;,!|i!|gikj|ii|k!!</tspan>
+<tspan x="15" y="258">  ,;,!|,:;.:;,,;,::i!!,::i;!i;|k!|.</tspan>
+<tspan x="15" y="277">   ,:i;:,,:.,;.:!.;ij!;.;:,;!k|jj:</tspan>
+<tspan x="15" y="296">    ,!i:;,.:,.:i!;.;ji::.;:i;ii!j</tspan>
+<tspan x="15" y="315">     .!i;:.,:.:!k!ki||,,:,;!k!k,,</tspan>
+<tspan x="15" y="334">      .!!;;,:;i||k!|i||,:ii|ji;</tspan>
+<tspan x="15" y="353">       ,!i;:i;|j!!i;|ii|i!|!|:</tspan>
+<tspan x="15" y="372">         ;j:||:!i!ij!|j!|i|jj</tspan>
+<tspan x="15" y="391">          |i!!i;|i!!j!!ii#ggk</tspan>
+<tspan x="15" y="410">          ;iiikki#g#Wgg%gjkji|</tspan>
+<tspan x="15" y="429">           ;!i!jiikjkg#ikj|kj:.</tspan>
+<tspan x="15" y="448">            ,;,:ii:!i|!i;!j!; ,:</tspan>
+<tspan x="15" y="467">       ,      ..:;.:;.:!i;: ,, .: .</tspan>
+<tspan x="15" y="486">                 ,:.,;,;: ,, ,.</tspan>
+<tspan x="15" y="505">                  ,:.,. ,</tspan></text></g>
+<g class="ascii-frame" style="animation-delay:-1.35s"><text xml:space="preserve"><tspan x="15" y="30">              ,;.:;</tspan>
+<tspan x="15" y="49">         ,;i#MMWM%M@%%Wj,</tspan>
+<tspan x="15" y="68">       ;#W%WggW@MM%@@%M%M#MM#j,</tspan>
+<tspan x="15" y="87">     !W@M%%M%M#M%%@%@%M@@%MW%M%g;</tspan>
+<tspan x="15" y="106">   i@%M%M@%W#W%W%%M%%@@%@@%@@%W@%!</tspan>
+<tspan x="15" y="125">  j%@%%MW%@%@M%M#Wgk#gj#g#@%@@%@M%;</tspan>
+<tspan x="15" y="144">  !%%M%Wgji:;,::.,:,.;.:!i!i#%@%M@g</tspan>
+<tspan x="15" y="163">   g%M||i;!,::,.;.,;.:;i;!i!!|#%%@k</tspan>
+<tspan x="15" y="182">   j@k!;!i;;,,;,.;.,:.:;i:|k!jik%%.</tspan>
+<tspan x="15" y="201">   !M|!i!ji|jj|!.,:,:|jkkkijj|kjMj</tspan>
+<tspan x="15" y="220">   ,Wi;!i;!i;|j||!;!!i|j!|j|ji|kj,</tspan>
+<tspan x="15" y="239">  .!;k!:|||g#!|i;;,||i!|gikji|iiki|</tspan>
+<tspan x="15" y="258">  ,;,!!,;:,::.,;,:;i!!,::|:!!:|ji|.</tspan>
+<tspan x="15" y="277">   ,:|;:,,:,.;.:|,:ij|:,::.:|j!kk:</tspan>
+<tspan x="15" y="296">    ,ii;;.,:.,:i|;,;ji::.:;|;|i|k</tspan>
+<tspan x="15" y="315">     ,!i::,.;,:|jiji||,,:,;!jij,,</tspan>
+<tspan x="15" y="334">      ,!|;;,;;ii|k!ii||,:!|!ji:</tspan>
+<tspan x="15" y="353">       ,!|;;i;!j!!!;|i||iiii|;</tspan>
+<tspan x="15" y="372">         ;j;ii;ii!|j!|j!|iijj</tspan>
+<tspan x="15" y="391">          |i!!i;!i!ij!!ii#g#k</tspan>
+<tspan x="15" y="410">          ;||!jji#g#WggMgkkjii</tspan>
+<tspan x="15" y="429">           ;!i!ki|kjk##|jk|jj;.</tspan>
+<tspan x="15" y="448">            ,;,:!!;!|!!i;iji: ,:</tspan>
+<tspan x="15" y="467">       .      ..:;,:;,:!i:; .. ,: ,</tspan>
+<tspan x="15" y="486">                 ,;,,:.;: ,. .,</tspan>
+<tspan x="15" y="505">                  ,;.,, ,</tspan></text></g>
+<g class="ascii-frame" style="animation-delay:-1.80s"><text xml:space="preserve"><tspan x="15" y="30">              .:.::</tspan>
+<tspan x="15" y="49">         ,;igMM@M%M@%M%k,</tspan>
+<tspan x="15" y="68">       ;#MWWg#M@@M%@@%M%W#MM#j,</tspan>
+<tspan x="15" y="87">     !WMM%%%%M#@MM@WM@@@@%@M%%%g;</tspan>
+<tspan x="15" y="106">   !%%@@%W%Mg@M%%@W%%@@@@@%@@%@@%|</tspan>
+<tspan x="15" y="125">  j%@%%M@WWW%M@WgW#kggk#ggW%@@%@M%;</tspan>
+<tspan x="15" y="144">  !W%MM@#ji;;,::,,;.,;,:!i!|#W%WM%g</tspan>
+<tspan x="15" y="163">   #MM!|i:i.;:..:..:.:;i;!!!|i#%%Mj</tspan>
+<tspan x="15" y="182">   jMji;!i:;,,:.,:.,:,:;|:ij!jik%%,</tspan>
+<tspan x="15" y="201">   !M|!!!ji!kj|!,,:.;|jkjjikj|kk%k</tspan>
+<tspan x="15" y="220">   ,Wi:!i;!!;|j||i;|ii|j!|j|j!|kj,</tspan>
+<tspan x="15" y="239">  .i:ji;!||##!!i;;.||i!|gikk!|iikii</tspan>
+<tspan x="15" y="258">  ,:.!!.::,:;.,;.:;!!!,;;i;|!;|k|i.</tspan>
+<tspan x="15" y="277">   ,:i;;,,:.,:,:i,:!j!;.:;,;!j!kj;</tspan>
+<tspan x="15" y="296">    ,ii:;,.:.,:|!;.;k!;;.::i;iiij</tspan>
+<tspan x="15" y="315">     ,!|::,.:.:!j!ki|i,,:,:!j!k.,</tspan>
+<tspan x="15" y="334">      ,!i:;,:;i!|j!|!i!.:ii|j|:</tspan>
+<tspan x="15" y="353">       ,!i;:!;|k|!i;ii||ii|||:</tspan>
+<tspan x="15" y="372">         ;j;!i:!i!ij!|j!|!ijj</tspan>
+<tspan x="15" y="391">          |i!|i:!i!!k!|iigggk</tspan>
+<tspan x="15" y="410">          ;!!!kjig##Wg#Mgkkj||</tspan>
+<tspan x="15" y="429">           ;ii!jiijkk#gijjijk;.</tspan>
+<tspan x="15" y="448">            .;,:|i;|!!|i;|j!: .:</tspan>
+<tspan x="15" y="467">       ,      ,,;;,;;.;!i;; .. ,: .</tspan>
+<tspan x="15" y="486">                 ,:.,;,:: ,, ..</tspan>
+<tspan x="15" y="505">                  ,;... ,</tspan></text></g>
+<g class="ascii-frame" style="animation-delay:-2.25s"><text xml:space="preserve"><tspan x="15" y="30">              ,:,;:</tspan>
+<tspan x="15" y="49">         ,;i#@%WM%MM%MWj,</tspan>
+<tspan x="15" y="68">       :#@WW##M%M@%@@%M@W#%Mgj,</tspan>
+<tspan x="15" y="87">     !%MM%%M%MgM%M@W@@%M@M@@%M%g;</tspan>
+<tspan x="15" y="106">   !%MM@MM%M#MWW%WW%M%@%W@%@@@@W%|</tspan>
+<tspan x="15" y="125">  j%@%M@@%@W%M%M#W#jggk#g#@%@@W@%W;</tspan>
+<tspan x="15" y="144">  !M%%%M#ji:;,;:,.:..:,:|i!|gW%%M%g</tspan>
+<tspan x="15" y="163">   #MM||i;i,;:,,:.,:,:;i;ii!|i#W%Mk</tspan>
+<tspan x="15" y="182">   j%ji:!i:;,,:.,:.,:.:;i;|j!kikM%,</tspan>
+<tspan x="15" y="201">   iM!!i!k!|kj||,,;,;|jkjj!jj|jjMj</tspan>
+<tspan x="15" y="220">   ,W!;!!;!i;!j||i:|i||j!ij|ji|kj,</tspan>
+<tspan x="15" y="239">  ,i;ki:!!|#gi||:;,i||!ig|jj||iiki|</tspan>
+<tspan x="15" y="258">  .;,!!.::,:;,,:.::ii!.;:i:!i;!j|!.</tspan>
+<tspan x="15" y="277">   ,:i;:,.:,,:.;!,;!k!;.::,;!j!kk:</tspan>
+<tspan x="15" y="296">    ,!|;;,,;..:i!;,;ji::,:;i;||ij</tspan>
+<tspan x="15" y="315">     .|i:;,.:.;!j!ji||.,:,;!j|j,,</tspan>
+<tspan x="15" y="334">      ,!i;;.::|!|k!!i||.:ii!ji;</tspan>
+<tspan x="15" y="353">       ,!i;:i;!ki|i:|i|!|!|i!:</tspan>
+<tspan x="15" y="372">         ;j;!i:ii!|ji!j!|!|kk</tspan>
+<tspan x="15" y="391">          !i!!i;!i!!j!|i|##gk</tspan>
+<tspan x="15" y="410">          :|i|kki#g#Wg#Mgkkj!!</tspan>
+<tspan x="15" y="429">           ;!iikiijjj##ikj|kj:,</tspan>
+<tspan x="15" y="448">            .;.:!i;!i!!i:|j!: ,;</tspan>
+<tspan x="15" y="467">       ,      ,,:;,;;,;|i;; ,. .: ,</tspan>
+<tspan x="15" y="486">                 ,:,.;,:: ,. ,.</tspan>
+<tspan x="15" y="505">                  ,:.., ,</tspan></text></g>
+<g class="ascii-frame" style="animation-delay:-2.70s"><text xml:space="preserve"><tspan x="15" y="30">              ,:,:;</tspan>
+<tspan x="15" y="49">         ,;igW%W@MM@%%%j,</tspan>
+<tspan x="15" y="68">       :#M%MggMMM@%M@MM%M#MM#k,</tspan>
+<tspan x="15" y="87">     !WMM%W%WMgMWM@%@@%%@@@@MM%g:</tspan>
+<tspan x="15" y="106">   !W%MMW@M%gMWW%%@%%@@%@@%@@%W@%|</tspan>
+<tspan x="15" y="125">  j%@%%@M%WW%M%M#W#jg#k#g#WM@M%@%%;</tspan>
+<tspan x="15" y="144">  !%%MW%gji;:,:;.,:,.;,;!|!|gWM%MMg</tspan>
+<tspan x="15" y="163">   #MM|ii;!.::..:,.:.::i;!!!|i#%%Wj</tspan>
+<tspan x="15" y="182">   j@j|;!i:;,.:,,:..:.:;i;ij|jik%%,</tspan>
+<tspan x="15" y="201">   !Mi!||ji|jj|!,,:,;|kjkjijkijjMj</tspan>
+<tspan x="15" y="220">   ,@i;!!;!i;!k||i;|i||j!|j|ji|jj,</tspan>
+<tspan x="15" y="239">  .i;ji;i!|#g!||::.!|i!|#|kj!|iiki!</tspan>
+<tspan x="15" y="258">  ,;,!!.::.:;.,;,:;!!|.::i;!!;!j||,</tspan>
+<tspan x="15" y="277">   ,:i;;..:,,:.;!.:|k!;.:;,:!j!kj:</tspan>
+<tspan x="15" y="296">    ,!i:;,,:.,:i!;,;j!;:.:;|;||ij</tspan>
+<tspan x="15" y="315">     .!|:;.,:.:!j!ji!|,,;.;!j|k,,</tspan>
+<tspan x="15" y="334">      ,!i::.;;|!|j!|!|!.:!i!ji;</tspan>
+<tspan x="15" y="353">       .!|;;i:|j|!i;|||!i!|i!:</tspan>
+<tspan x="15" y="372">         ;j:!|:!i||j!!j||iikj</tspan>
+<tspan x="15" y="391">          i|!!i;!ii!j!|iig##k</tspan>
+<tspan x="15" y="410">          :|i|jji###Wg#M#kjki|</tspan>
+<tspan x="15" y="429">           ;iiijiikjk#gikj|kj;,</tspan>
+<tspan x="15" y="448">            .:.;!|;!!!|i;|j!: .:</tspan>
+<tspan x="15" y="467">       ,      ,.:;.;;,;!i;; ,. ,: .</tspan>
+<tspan x="15" y="486">                 ,;.,;,;: ,. .,</tspan>
+<tspan x="15" y="505">                  ,;.,. .</tspan></text></g>
+<g class="ascii-frame" style="animation-delay:-3.15s"><text xml:space="preserve"><tspan x="15" y="30">              ,;,::</tspan>
+<tspan x="15" y="49">         .;|gM%%M%M@WMWj,</tspan>
+<tspan x="15" y="68">       :#MWW##MMM@%@@%%MM#MM#k.</tspan>
+<tspan x="15" y="87">     !MMMWW%%MgM%M@%@%%@@%@@%MM#;</tspan>
+<tspan x="15" y="106">   !%%MW%M%Wg%MWMMM%M@@%@@@W@%W@%|</tspan>
+<tspan x="15" y="125">  j@@@%%@%@W%M%@#@gk##k#g#W%@@%@M@;</tspan>
+<tspan x="15" y="144">  !%%@%%#j!:;,:;.,:,,;,:!i||#@@@%%g</tspan>
+<tspan x="15" y="163">   #MW||i;|,::,,:.,;.:;i;!ii|i#%%Mj</tspan>
+<tspan x="15" y="182">   jWki:ii:;,.:..:,.:.:;!:|k!jikW%.</tspan>
+<tspan x="15" y="201">   !M!!|!ki|jj|i.,:,;ijkkjijj|jk%j</tspan>
+<tspan x="15" y="220">   .Wi;!i;!i;!j!|i:|i||ki|j!j||kj,</tspan>
+<tspan x="15" y="239">  ,i;ji;!i|#g!!i;;,||i!|gikj!ii!ki|</tspan>
+<tspan x="15" y="258">  ,;,!!.;;,:;.,;,::!!!,;:i;i!;|j||,</tspan>
+<tspan x="15" y="277">   ,;i:;,,:,,:.:|,:|j|;,;:,:!j!kk:</tspan>
+<tspan x="15" y="296">    ,|i:;,,:.,:i!:,;ji::.:;i;|iik</tspan>
+<tspan x="15" y="315">     .ii:;.,;.:|j|k!i|,,:,;ij|j..</tspan>
+<tspan x="15" y="334">      .!|::,:;i!|j!|ii!,:!i!k|:</tspan>
+<tspan x="15" y="353">       .!i;;i:|j!|i;|i!||!|i|:</tspan>
+<tspan x="15" y="372">         ;j;!i;!i!ij||j!|i|kj</tspan>
+<tspan x="15" y="391">          |i!!|;!i!!j!iii#g#k</tspan>
+<tspan x="15" y="410">          ;|iikj!#ggWg#Wgkkj!|</tspan>
+<tspan x="15" y="429">           ;!!!jiikjj##ijk|kj;.</tspan>
+<tspan x="15" y="448">            ,;.:!i;||!|i:|ji: ,:</tspan>
+<tspan x="15" y="467">       ,      .,:;,:;,;!|;; ,. ,: ,</tspan>
+<tspan x="15" y="486">                 .:,.;.;: .. .,</tspan>
+<tspan x="15" y="505">                  ,:.,. ,</tspan></text></g></g></g>
 <text x="405" y="30" fill="#c9d1d9" >habibie@ciphernet ------------------------------------</text>
 <text x="405" y="68" fill="#c9d1d9"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Focus</tspan>:<tspan fill="#616e7f"> ......... </tspan><tspan fill="#a5d6ff">Cybersecurity &amp; networking</tspan></text>
 <text x="405" y="94" fill="#c9d1d9"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Status</tspan>:<tspan fill="#616e7f"> ........ </tspan><tspan fill="#a5d6ff">Learning &amp; exploring</tspan></text>
