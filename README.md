@@ -13,7 +13,5 @@
 
 I'm always open to learning, sharing ideas, and connecting with others interested in cybersecurity.
 
-[![Instagram](https://img.shields.io/badge/Follow_on_Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/mhabibierabbani)
-[![Email](https://img.shields.io/badge/Send_me_an_Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mhabibierabbani@gmail.com)
-
+\
 </div>
