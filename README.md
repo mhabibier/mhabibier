@@ -7,31 +7,7 @@
 
 ### Hi, I'm Habibie
 
-A cybersecurity and networking enthusiast, learning how systems work and how to make them more secure.
 
-**Curiosity · Security · Connection**
-
-</div>
-
-### About Me
-
-I'm a **Computer Engineering student at Telkom University** with a strong interest in **cybersecurity** and **information technology**.
-
-I have a foundation in networking, operating systems, data security, and programming with C and Python. I enjoy analyzing technical problems and finding practical ways to solve them.
-
-I'm especially interested in vulnerability analysis, network defense, and cloud infrastructure. My goal is to keep learning and grow into a **cybersecurity analyst**.
-
-### What I'm Exploring
-
-- **Network security and ethical hacking** understanding vulnerabilities and how to address them.
-- **Vulnerability analysis and network defense** learning to identify risks and protect systems.
-- **Cloud infrastructure and DevSecOps** exploring how to build secure, scalable systems.
-
-I'm building my understanding one concept at a time, with a focus on responsible learning, resilient networks, and secure infrastructure.
-
----
-
-<div align="center">
 
 ### Let's Connect
 
