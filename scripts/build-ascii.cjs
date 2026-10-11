@@ -9,11 +9,24 @@ const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').r
 const frameCount = 8;
 const frameSeconds = 0.05;
 const cycleSeconds = frameCount * frameSeconds;
+const transitionSeconds = 8;
+const glyphKeyframes = Array.from({ length: frameCount }, (_, i) =>
+  `@keyframes glyph-frame-${i}{0%{opacity:${i === 0 ? 1 : 0}}${i * 100 / frameCount}%{opacity:1}${(i + 1) * 100 / frameCount}%,100%{opacity:0}}`
+).join('\n');
 const animationCss = `
-.ascii-frame{opacity:0;animation:glyph-cycle ${cycleSeconds}s steps(1,end) infinite}
-.ascii-frame:first-child{opacity:1}
-@keyframes glyph-cycle{0%{opacity:1}12.5%,100%{opacity:0}}
-@media(prefers-reduced-motion:reduce){.ascii-frame{animation:none;opacity:0}.ascii-frame:first-child{opacity:1}}
+.ascii-frame,.binary-frame{opacity:0;animation-duration:${cycleSeconds}s;animation-timing-function:steps(1,end);animation-iteration-count:infinite}
+.ascii-frame:first-child,.binary-frame:first-child{opacity:1}
+.portrait-ascii{opacity:1;animation:ascii-morph ${transitionSeconds}s ease-in-out infinite}
+.portrait-binary{opacity:0;animation:binary-morph ${transitionSeconds}s ease-in-out infinite}
+${glyphKeyframes}
+@keyframes ascii-morph{0%,25%,90%,100%{opacity:1}40%,75%{opacity:0}}
+@keyframes binary-morph{0%,25%,90%,100%{opacity:0}40%,75%{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+ .ascii-frame,.binary-frame{animation:none;opacity:0}
+ .ascii-frame:first-child,.binary-frame:first-child{opacity:1}
+ .portrait-ascii{animation:none;opacity:1}
+ .portrait-binary{animation:none;opacity:0}
+}
 `;
 
 function frameLines(lines, frame) {
@@ -34,9 +47,32 @@ function frameLines(lines, frame) {
 function asciiArt(lines, animate) {
   const renderText = (frame) => `<text xml:space="preserve">${frame.map((line, i) => `<tspan x="15" y="${30 + i * 19}">${escape(line)}</tspan>`).join('\n')}</text>`;
   if (!animate) return renderText(lines);
-  return `<g aria-hidden="true">${Array.from({ length: frameCount }, (_, i) =>
-    `<g class="ascii-frame" style="animation-delay:-${(i * frameSeconds).toFixed(2)}s">${renderText(frameLines(lines, i))}</g>`
-  ).join('\n')}</g>`;
+  const asciiFrames = Array.from({ length: frameCount }, (_, i) =>
+    `<g class="ascii-frame" style="animation-name:glyph-frame-${i}">${renderText(frameLines(lines, i))}</g>`
+  ).join('\n');
+  const binaryFrames = Array.from({ length: frameCount }, (_, i) =>
+    `<g class="binary-frame" style="animation-name:glyph-frame-${i}">${binaryText(lines, i)}</g>`
+  ).join('\n');
+  return `<g aria-hidden="true"><g class="portrait-ascii">${asciiFrames}</g><g class="portrait-binary">${binaryFrames}</g></g>`;
+}
+
+function binaryText(lines, frame) {
+  // Keep the same grid and spaces. Digit opacity carries the original ASCII
+  // weight so the binary portrait retains its hair, eyes, and facial contours.
+  const weights = [['@%MW', 1], ['#g', .86], ['kj', .72], ['i|!', .55], [';:', .4], ['.,', .28]];
+  const body = lines.map((line, y) => {
+    const runs = [];
+    [...line].forEach((char, x) => {
+      const opacity = char === ' ' ? 1 : weights.find(([group]) => group.includes(char))?.[1] ?? .55;
+      const hash = ((x + 1) * 73856093 ^ (y + 1) * 19349663 ^ frame * 83492791) >>> 0;
+      const digit = char === ' ' ? ' ' : String(Math.floor(hash / 100) % 2);
+      const previous = runs[runs.length - 1];
+      if (previous?.opacity === opacity) previous.text += digit;
+      else runs.push({ opacity, text: digit });
+    });
+    return `<tspan x="15" y="${30 + y * 19}">${runs.map((run) => `<tspan opacity="${run.opacity}">${run.text}</tspan>`).join('')}</tspan>`;
+  }).join('\n');
+  return `<text xml:space="preserve">${body}</text>`;
 }
 
 async function photoToText(input) {
@@ -91,7 +127,7 @@ function svgFor(lines, theme, animate = false) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" role="img" aria-labelledby="title desc" xml:space="preserve">
 <title id="title">Habibie — ASCII terminal GitHub profile</title>
-<desc id="desc">A coarse portrait formed entirely from 39 columns and 26 rows of text characters${animate ? ', with gently changing glyphs' : ''}, beside Habibie's cybersecurity interests and contact information.</desc>
+<desc id="desc">A coarse portrait formed entirely from 39 columns and 26 rows of text characters${animate ? ', with changing glyphs and a smooth transition between ASCII and binary digits' : ''}, beside Habibie's cybersecurity interests and contact information.</desc>
 <style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}text,tspan{white-space:pre}${animate ? animationCss : ''}</style>
 <rect width="985" height="530" fill="${c.bg}" rx="15"/>
 <g fill="${c.fg}">${asciiArt(lines, animate)}</g>
@@ -120,7 +156,7 @@ async function main() {
   const portraitSvgFor = (animate) => `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="530" viewBox="0 0 400 530" xml:space="preserve">
 <title>Habibie — native ASCII portrait</title>
-<desc>A coarse ASCII portrait${animate ? ' with changing glyphs; reduced motion displays a still portrait' : ''}.</desc>
+<desc>A coarse ASCII portrait${animate ? ' with changing glyphs and a smooth transition to binary digits; reduced motion displays a still ASCII portrait' : ''}.</desc>
 <style>text{font-family:Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}${animate ? animationCss : ''}</style>
 <rect width="400" height="530" fill="#161b22" rx="15"/>
 <g fill="#c9d1d9">${asciiArt(lines, animate)}</g>
