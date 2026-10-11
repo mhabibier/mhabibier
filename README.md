@@ -13,5 +13,5 @@
 
 I'm always open to learning, sharing ideas, and connecting with others interested in cybersecurity.
 
-\
+
 </div>
