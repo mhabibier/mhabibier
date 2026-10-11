@@ -1,0 +1,12 @@
+{
+  "name": "mhabibier-profile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Habibie's native ASCII portrait and cybersecurity GitHub profile",
+  "scripts": {
+    "build": "node scripts/build-ascii.cjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}

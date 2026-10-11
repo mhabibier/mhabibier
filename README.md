@@ -1,17 +1,19 @@
 <div align="center">
 
-# Hi, I'm mhabibier 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-ascii-dark.svg">
+  <img src="assets/profile-ascii-light.svg" width="985" alt="Habibie's ASCII text portrait and terminal profile, with cybersecurity interests and contact information">
+</picture>
 
-<img src="Thinking Think GIF.gif" width="440" alt="Coding GIF" />
+### Hi, I'm Habibie
 
-<br />
+A cybersecurity and networking enthusiast, learning how systems work and how to make them more secure.
 
+**Curiosity · Security · Connection**
 
 </div>
 
----
-
-##  About Me
+### About Me
 
 I'm a **Computer Engineering student at Telkom University** with a strong interest in **cybersecurity** and **information technology**.
 
@@ -19,12 +21,13 @@ I have a foundation in networking, operating systems, data security, and program
 
 I'm especially interested in vulnerability analysis, network defense, and cloud infrastructure. My goal is to keep learning and grow into a **cybersecurity analyst**.
 
-##  What I'm Exploring
+### What I'm Exploring
 
 - **Network security and ethical hacking** understanding vulnerabilities and how to address them.
 - **Vulnerability analysis and network defense** learning to identify risks and protect systems.
 - **Cloud infrastructure and DevSecOps** exploring how to build secure, scalable systems.
 
+I'm building my understanding one concept at a time, with a focus on responsible learning, resilient networks, and secure infrastructure.
 
 ---
 

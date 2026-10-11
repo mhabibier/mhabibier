@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Habibie · CipherNet profile preview</title>
+  <style>
+    :root{color-scheme:dark;--bg:#081018;--card:#0d151e;--border:#293744;--text:#e5edf4;--muted:#9aafbd;--link:#77daba}
+    :root[data-theme="light"]{color-scheme:light;--bg:#eaf0f0;--card:#fff;--border:#d0dadd;--text:#203840;--muted:#5d727b;--link:#087354}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65}
+    .toolbar{max-width:1032px;margin:24px auto 14px;padding:0 16px;display:flex;gap:16px;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+    button{border:1px solid var(--border);border-radius:7px;background:var(--card);color:var(--text);padding:8px 14px;cursor:pointer;font:inherit}
+    button:focus-visible,a:focus-visible{outline:3px solid var(--link);outline-offset:3px}
+    main{max-width:1000px;margin:0 auto 48px;padding:26px;border:1px solid var(--border);border-radius:12px;background:var(--card)}
+    .hero{display:block;width:100%;height:auto;border-radius:12px} .intro,.connect{text-align:center} h2{font-size:21px;line-height:1.4;margin:26px 0 10px}
+    .intro p{max-width:780px;margin:10px auto} .motto{color:var(--link);font-size:14px;font-weight:600;letter-spacing:.04em}
+    .interests{margin:24px 0;padding-top:4px} ul{padding-left:24px} li{margin:13px 0}
+    hr{border:0;border-top:1px solid var(--border);margin:28px 0} a{color:var(--link)}
+    .badge{display:inline-block;margin:3px;color:white;border-radius:2px;padding:4px 12px;text-decoration:none;font-size:12px;font-weight:600;line-height:1.5}
+    .instagram{background:#E4405F}.email{background:#D14836}.foot{margin:18px auto 0;max-width:1000px;text-align:center;color:var(--muted);font-size:12px}
+    @media(max-width:600px){main{padding:16px;margin:0 10px 24px}.toolbar{margin-top:14px}h2{font-size:19px}.toolbar span{max-width:60%}}
+  </style>
+</head>
+<body>
+  <nav class="toolbar" aria-label="Preview options">
+    <span>CipherNet · GitHub profile preview</span>
+    <button id="theme" type="button" aria-pressed="false">Light mode</button>
+  </nav>
+  <main>
+    <img class="hero" id="hero" src="assets/profile-ascii-dark.svg" width="985" height="530" alt="Habibie's ASCII text portrait beside a cybersecurity and networking terminal profile">
+    <div class="intro">
+      <h2>Hi, I'm Habibie</h2>
+      <p>A cybersecurity and networking enthusiast, learning how systems work and how to make them more secure.</p>
+      <p class="motto">Curiosity · Security · Connection</p>
+    </div>
+    <section class="interests" aria-labelledby="exploring">
+      <h2 id="exploring">What I'm Exploring</h2>
+      <ul>
+        <li><strong>Network security and ethical hacking</strong> understanding vulnerabilities and how to address them.</li>
+        <li><strong>Vulnerability analysis and network defense</strong> learning to identify risks and protect systems.</li>
+        <li><strong>Cloud infrastructure and DevSecOps</strong> exploring how to build secure, scalable systems.</li>
+      </ul>
+      <p>I'm building my understanding one concept at a time, with a focus on responsible learning, resilient networks, and secure infrastructure.</p>
+    </section>
+    <hr>
+    <section class="connect" aria-labelledby="connect">
+      <h2 id="connect">Let's Connect</h2>
+      <p>I'm always open to learning, sharing ideas, and connecting with others interested in cybersecurity.</p>
+      <a class="badge instagram" href="https://instagram.com/mhabibierabbani">Follow on Instagram</a>
+      <a class="badge email" href="mailto:mhabibierabbani@gmail.com">Send me an Email</a>
+    </section>
+  </main>
+  <p class="foot">Local preview of README content. GitHub supplies its own typography and spacing.</p>
+  <script>
+    const button = document.getElementById('theme');
+    button.addEventListener('click', () => {
+      const light = document.documentElement.dataset.theme !== 'light';
+      document.documentElement.dataset.theme = light ? 'light' : 'dark';
+      document.getElementById('hero').src = `assets/profile-ascii-${light ? 'light' : 'dark'}.svg`;
+      button.textContent = light ? 'Dark mode' : 'Light mode';
+      button.setAttribute('aria-pressed', String(light));
+    });
+  </script>
+</body>
+</html>
